@@ -1,5 +1,11 @@
 # @\_linked/org
 
+## 1.1.1
+
+### Patch Changes
+
+- [#10](https://github.com/linked-fw/org/pull/10) [`21fbfed`](https://github.com/linked-fw/org/commit/21fbfedb722c8b70697fc645f98e11cd2fd2ff58) Thanks [@flyon](https://github.com/flyon)! - Declare npm as the package manager for this repo, convert the build scripts off `yarn`, and mark `package-lock.json` as a generated file.
+
 ## 1.1.0
 
 ### Minor Changes
