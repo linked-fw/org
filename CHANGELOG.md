@@ -1,5 +1,33 @@
 # @\_linked/org
 
+## 1.2.0
+
+### Minor Changes
+
+- [#16](https://github.com/linked-fw/org/pull/16) [`6289590`](https://github.com/linked-fw/org/commit/6289590b39d9b9370e882e4bca19942bd6639af6) Thanks [@flyon](https://github.com/flyon)! - Require `@_linked/core@^2.22.8` (was `^2.21.0`), and pin it in the lockfile.
+
+  The declared range was wide enough that the resolved core depended on whatever the
+  consumer — or this repo's own CI, via `package-lock.json` — happened to install. Core
+  decides how a shape's IRI is minted, so a stale core made this package emit legacy
+  `data.lincd.org` IRIs instead of the arch-02 `linked.cm` scheme. Which IRIs a published
+  package produces should not be a function of the installer's dependency tree.
+
+  Minor rather than patch: this raises the minimum core a consumer must resolve, so it
+  changes what gets installed rather than only what this package does internally.
+
+### Patch Changes
+
+- [#15](https://github.com/linked-fw/org/pull/15) [`1343103`](https://github.com/linked-fw/org/commit/1343103510190d72a587d6316f1087fb0ce5462c) Thanks [@flyon](https://github.com/flyon)! - The ontology no longer registers by importing itself.
+
+  It carried `import * as _this from './<prefix>.js'` and passed that namespace to
+  `linkedOntology()`. Under `tsc` the self-reference survives; under a bundler it does
+  not — Rollup treats it as a circular import and elides it, so the binding is
+  `undefined` and a consuming app dies at boot with `_this is not defined`.
+
+  Registration now lives in a `<prefix>.register.ts` sibling, imported from the package
+  entry. Nothing changes for consumers: importing this package still registers the
+  ontology.
+
 ## 1.1.2
 
 ### Patch Changes
