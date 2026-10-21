@@ -1,15 +1,19 @@
 import { Organization } from '@_linked/schema/shapes/Organization';
 import { Person } from '@_linked/schema/shapes/Person';
-import { Thing } from '@_linked/schema/shapes/Thing';
 import { ShapeSet } from '@_linked/core/collections/ShapeSet';
+import { Shape } from '@_linked/core/shapes/Shape';
 import { shacl } from '@_linked/core/ontologies/shacl';
 import { createPropertyShape, objectProperty } from '@_linked/core/shapes/SHACL';
 import { org } from '../ontologies/org.js';
 import { linkedShape } from '../package.js';
 import { Role } from './Role.js';
 
+/**
+ * `org:Membership`: a person's membership of an organization, in a role. ORG gives the class no
+ * superclass, so the shape extends no schema shape.
+ */
 @linkedShape
-export class Membership extends Thing {
+export class Membership extends Shape {
   static targetClass = org.Membership;
 
   @objectProperty({

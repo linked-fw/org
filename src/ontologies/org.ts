@@ -1,13 +1,12 @@
 import type {NodeReferenceValue} from '@_linked/core/utils/NodeReference';
 import {createNameSpace} from '@_linked/core/utils/NameSpace';
+import {loadOntologyFiles} from '@_linked/core/ontology/loadOntologyFiles';
 
-/**
- * Load the data of this ontology into memory, thus adding the properties of the entities of this ontology to the local graph.
- */
-export var loadData = async () => {
-  //@ts-ignore
-  return import('../data/org.json', { with: { type: 'json' } }).then((data) => data.default);
-};
+/** The package's ontology data, relative to this module: the W3C ORG Turtle, unedited (copied into `lib/` by the build). */
+export const dataFiles = ['../data/org.ttl'];
+
+/** Reads the package's ontology data (server only). */
+export const loadData = () => loadOntologyFiles(import.meta.url, dataFiles);
 
 /**
  * The namespace of this ontology, which can be used to create NamedNodes with URI's not listed in this file
