@@ -1,5 +1,5 @@
 ---
-'@_linked/org': major
+'@_linked/org': minor
 ---
 
 The package ships the W3C Organization Ontology as its ontology data, and its shapes follow that vocabulary's class hierarchy.
