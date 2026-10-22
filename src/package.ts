@@ -9,4 +9,4 @@ export const {
   packageName,
   getPackageShape
 
-} = linkedPackage('@_linked/org');
+} = linkedPackage('@_linked/org', {mirrors: 'http://www.w3.org/ns/org#'});
