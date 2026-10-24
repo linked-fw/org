@@ -4,7 +4,7 @@ import { ShapeSet } from '@_linked/core/collections/ShapeSet';
 import { Shape } from '@_linked/core/shapes/Shape';
 import { shacl } from '@_linked/core/ontologies/shacl';
 import { createPropertyShape, objectProperty } from '@_linked/core/shapes/SHACL';
-import { org } from '../ontologies/org.js';
+import * as org from '../ontologies/org.js';
 import { linkedShape } from '../package.js';
 import { Role } from './Role.js';
 

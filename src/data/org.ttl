@@ -1,3 +1,7 @@
+# The Organization Ontology (W3C Recommendation 2014-01-16), as published by the W3C:
+# https://www.w3.org/ns/org.ttl (owl:versionInfo "0.8", Last-Modified 2025-09-05).
+# Unchanged apart from this comment. Refresh: see README §The data.
+
 @prefix rdf:        <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl:        <http://www.w3.org/2002/07/owl#> .

@@ -3,7 +3,7 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readdirSync} from 'node:fs';
 import {hierarchyFromTurtle} from '@_linked/core/ontology/hierarchy';
-import {dataFiles, loadData, ns} from '../lib/esm/ontologies/org.js';
+import {dataFiles, loadData, ns} from '../lib/esm/ontologies/org.data.js';
 
 const ORG = 'http://www.w3.org/ns/org#';
 
