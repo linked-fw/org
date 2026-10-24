@@ -56,11 +56,11 @@
     }
   },
   "dependencies": {
-    "@_linked/core": "^2.37.2",
-    "@_linked/schema": "^1.6.0"
+    "@_linked/core": "^2.39.1",
+    "@_linked/schema": "^1.6.1"
   },
   "devDependencies": {
-    "@_linked/cli": "^1.54.0",
+    "@_linked/cli": "^1.56.0",
     "@changesets/changelog-github": "^1.0.0",
     "@changesets/cli": "^3.0.0",
     "@types/node": "^24.0.0",
