@@ -1,5 +1,11 @@
 # @\_linked/org
 
+## 1.3.1
+
+### Patch Changes
+
+- [#49](https://github.com/linked-fw/org/pull/49) [`c6bfeb2`](https://github.com/linked-fw/org/commit/c6bfeb2bd8567d67b120953405b094034b73238e) Thanks [@flyon](https://github.com/flyon)! - Ships `lib/esm/data/shapes.ttl`; core range raised.
+
 ## 1.3.0
 
 ### Minor Changes
