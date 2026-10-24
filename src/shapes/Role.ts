@@ -1,8 +1,8 @@
 import {literalProperty} from '@_linked/core/shapes/SHACL';
 import {Shape} from '@_linked/core/shapes/Shape';
-import {schema} from '@_linked/schema/ontologies/schema';
+import * as schema from '@_linked/schema/ontologies/schema';
 import {linkedShape} from '../package.js';
-import {org} from '../ontologies/org.js';
+import * as org from '../ontologies/org.js';
 
 /**
  * `org:Role`. ORG does not make it a subclass of `schema:Thing`, so the shape does not extend
