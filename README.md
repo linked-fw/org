@@ -44,3 +44,7 @@ The official file carries its own ontology header, so this package has no `-adde
 npx linked build    # checks the ontology modules, compiles, writes lib/esm/data/shapes.ttl
 npm test            # runs against lib/
 ```
+
+## Data license
+
+The package code is MIT licensed (see `LICENSE`). The bundled ontology data is derived from the W3C Organization Ontology (https://www.w3.org/ns/org) and is not covered by the MIT license: it remains under the Open Data Commons Public Domain Dedication and License (PDDL) 1.0, https://opendatacommons.org/licenses/pddl/1-0/, as its vocabulary file declares (dct:license). See `NOTICE`.
