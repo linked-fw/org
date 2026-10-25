@@ -1,5 +1,11 @@
 # @\_linked/org
 
+## 1.4.1
+
+### Patch Changes
+
+- [#53](https://github.com/linked-fw/org/pull/53) [`2565744`](https://github.com/linked-fw/org/commit/2565744bc540095b673d295b8bfe6d72b4bb71ca) Thanks [@flyon](https://github.com/flyon)! - License: MIT (data under its original license)
+
 ## 1.4.0
 
 ### Minor Changes
