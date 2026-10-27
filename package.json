@@ -12,7 +12,9 @@
   },
   "version": "1.4.1",
   "packageManager": "npm@12.2.0",
-  "linkedPackage": true,
+  "linked": {
+    "kind": "ontology"
+  },
   "linkedOntologies": {
     "org": {
       "namespace": "http://www.w3.org/ns/org#"
