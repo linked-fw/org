@@ -1,5 +1,11 @@
 # @\_linked/org
 
+## 1.4.2
+
+### Patch Changes
+
+- [#58](https://github.com/linked-fw/org/pull/58) [`cca0610`](https://github.com/linked-fw/org/commit/cca0610d63ca4cd2eba7123db0f76ed96edf8e89) Thanks [@flyon](https://github.com/flyon)! - `package.json` says what this package is in `"linked": {"kind": "ontology"}` instead of `"linkedPackage": true`, which the CLI and server no longer read.
+
 ## 1.4.1
 
 ### Patch Changes
