@@ -12,8 +12,11 @@ import * as org from '@_linked/org/ontologies/org';
 static targetClass = org.Membership;
 ```
 
-`ontologies/org` has one named export per term (45); `ontologies/org.data` holds `ns`,
-`dataFiles`, `_ontologyResource` and `loadData()`. `linked generate-ontology` writes the modules
+`ontologies/org` has one named export per term (45), each an `{id}` with the term's full IRI.
+`ontologies/index` registers the ontology with its data and suggested prefix; the package entry and
+`shapes/index` import it. The package registers no prefix: an app lists the prefixes it uses in
+its own prefix map. Where code needs a namespace function, core's `createNameSpace('http://www.w3.org/ns/org#')` gives one.
+`linked generate-ontology` writes the modules
 from the data (`package.json` `"linkedOntologies"`), and `linked build` fails when they are stale;
 never edit them by hand.
 

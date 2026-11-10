@@ -1,4 +1,4 @@
-import './ontologies/org.register.js';
+import './ontologies/index.js';
 import './types.js';
 
 //SHAPES FIRST
