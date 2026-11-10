@@ -36,7 +36,9 @@ in one extra file per prefix, `src/data/<prefix>-added.ttl`, listed in `"linkedO
 New classes or properties never go there; a term a standard lacks belongs in the consumer's own
 ontology package.
 
-The official file carries its own ontology header, so this package has no `-added` file.
+The official file carries its own ontology header but no suggested prefix, so
+`src/data/org-added.ttl` adds `vann:preferredNamespacePrefix "org"` and
+`vann:preferredNamespaceUri` to it.
 
 ## Development
 

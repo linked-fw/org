@@ -1,0 +1,7 @@
+# What the published file lacks: the suggested prefix of the ontology. Only metadata; never a new
+# term (see README §The data).
+@prefix vann: <http://purl.org/vocab/vann/> .
+
+<http://www.w3.org/ns/org#>
+    vann:preferredNamespacePrefix "org" ;
+    vann:preferredNamespaceUri "http://www.w3.org/ns/org#" .

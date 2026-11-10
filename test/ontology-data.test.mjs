@@ -9,12 +9,13 @@ const ORG = 'http://www.w3.org/ns/org#';
 
 test('ontology wraps the W3C org vocabulary', () => {
   assert.equal(ns('Role').id, `${ORG}Role`);
-  assert.deepEqual(dataFiles, ['../data/org.ttl']);
+  assert.deepEqual(dataFiles, ['../data/org.ttl', '../data/org-added.ttl']);
 });
 
 test('ontology data is the W3C ORG Turtle, with no legacy lincd.org IRI', async () => {
-  const [text, ...rest] = await loadData();
+  const [text, added, ...rest] = await loadData();
   assert.equal(rest.length, 0);
+  assert.match(added, /vann:preferredNamespacePrefix "org"/);
   assert.match(text, /@prefix org:\s+<http:\/\/www\.w3\.org\/ns\/org#>/);
   assert.ok(!text.includes('lincd.org'), 'no lincd.org IRI in ontology data');
 });

@@ -17,7 +17,11 @@
   },
   "linkedOntologies": {
     "org": {
-      "namespace": "http://www.w3.org/ns/org#"
+      "namespace": "http://www.w3.org/ns/org#",
+      "data": [
+        "org.ttl",
+        "org-added.ttl"
+      ]
     }
   },
   "type": "module",
