@@ -7,6 +7,6 @@
  * plain node (no CSS, no React tree) as well as in a bundle. The package
  * entry imports it instead of listing shapes itself.
  */
-import '../ontologies/org.register.js';
+import '../ontologies/index.js';
 import './Membership.js';
 import './Role.js';

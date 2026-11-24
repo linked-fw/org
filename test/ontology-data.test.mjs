@@ -3,18 +3,27 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readdirSync} from 'node:fs';
 import {hierarchyFromTurtle} from '@_linked/core/ontology/hierarchy';
-import {dataFiles, loadData, ns} from '../lib/esm/ontologies/org.data.js';
+import {getRegisteredOntologies} from '@_linked/core/utils/Package';
+import * as org from '../lib/esm/ontologies/org.js';
+import '../lib/esm/ontologies/index.js';
 
 const ORG = 'http://www.w3.org/ns/org#';
+const registration = getRegisteredOntologies().find(
+  (o) => o.packageName === '@_linked/org' && o.name === 'org',
+);
+const loadData = () => registration.load();
 
 test('ontology wraps the W3C org vocabulary', () => {
-  assert.equal(ns('Role').id, `${ORG}Role`);
-  assert.deepEqual(dataFiles, ['../data/org.ttl']);
+  assert.equal(org.Role.id, `${ORG}Role`);
+  assert.equal(registration.namespace, ORG);
+  assert.equal(registration.suggestedPrefix, 'org');
+  assert.deepEqual(registration.files, ['../data/org.ttl', '../data/org-added.ttl']);
 });
 
 test('ontology data is the W3C ORG Turtle, with no legacy lincd.org IRI', async () => {
-  const [text, ...rest] = await loadData();
+  const [text, added, ...rest] = await loadData();
   assert.equal(rest.length, 0);
+  assert.match(added, /vann:preferredNamespacePrefix "org"/);
   assert.match(text, /@prefix org:\s+<http:\/\/www\.w3\.org\/ns\/org#>/);
   assert.ok(!text.includes('lincd.org'), 'no lincd.org IRI in ontology data');
 });

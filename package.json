@@ -17,7 +17,11 @@
   },
   "linkedOntologies": {
     "org": {
-      "namespace": "http://www.w3.org/ns/org#"
+      "namespace": "http://www.w3.org/ns/org#",
+      "data": [
+        "org.ttl",
+        "org-added.ttl"
+      ]
     }
   },
   "type": "module",
@@ -65,8 +69,8 @@
     }
   },
   "dependencies": {
-    "@_linked/core": "^2.41.0",
-    "@_linked/schema": "^1.8.0"
+    "@_linked/core": "^3.0.0",
+    "@_linked/schema": "^2.0.0"
   },
   "devDependencies": {
     "@_linked/cli": "^1.57.0",
